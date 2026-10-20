@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Create a local demo appointment request for Lindy's Pharmacy.">
+    <title>Lindy's Pharmacy | Book Appointment</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+    <header class="site-header"><nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Lindy's Pharmacy home"><span class="brand-icon" aria-hidden="true">L<span>P</span></span><span>Lindy's Pharmacy</span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+        <div class="nav-links" id="nav-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="doctors.html">Doctors</a><a href="book.html" aria-current="page">Book Appointment</a><a href="status.html">Check Status</a><a class="nav-portal" href="admin.html">Staff Portal</a></div>
+    </nav></header>
+    <main class="container main-content">
+        <section class="form-panel">
+            <header class="form-heading"><span class="brand-icon brand-icon-light" aria-hidden="true">L<span>P</span></span><div><h1>Lindy's Pharmacy</h1><p>Complete the form below to submit an appointment request.</p></div></header>
+            <div class="section-label">Patient Profile</div>
+            <div class="notice notice-compact" role="note">Static demo only: information is saved in this browser and is not transmitted. Do not enter real patient or medical information.</div>
+            <div class="message" data-message aria-live="polite" hidden></div>
+            <form id="appointment-form" class="form-grid">
+                <div class="field field-full"><label for="patient_name">Full name</label><input id="patient_name" name="patient_name" autocomplete="name" required maxlength="120" placeholder="e.g. Juan Dela Cruz"></div>
+                <div class="field field-full"><label for="patient_phone">Phone number</label><input id="patient_phone" name="patient_phone" type="tel" autocomplete="tel" required maxlength="40" placeholder="09123456789"></div>
+                <div class="field"><label for="patient_age">Age</label><input id="patient_age" name="patient_age" type="number" min="0" max="120" required placeholder="Enter age"></div>
+                <div class="field"><label for="patient_gender">Gender</label><input id="patient_gender" name="patient_gender" required maxlength="60" placeholder="Enter gender"></div>
+                <div class="field"><label for="patient_address">Address</label><input id="patient_address" name="patient_address" required maxlength="250" autocomplete="street-address" placeholder="Enter complete address"></div>
+                <div class="field"><label for="marital_status">Marital status</label><select id="marital_status" name="marital_status" required><option value="" selected disabled>Select marital status</option><option>Single</option><option>Married</option><option>Widowed</option></select></div>
+                <div class="field field-full"><label for="service">Service required</label><select id="service" name="service" required><option value="" selected disabled>Select service</option><option>Medicine Consultation</option><option>Prescription Refill</option><option>Health Product Inquiry</option><option>General Health Checkup</option><option value="Others:">Others</option></select></div>
+                <div class="field field-full" id="other-service-field" hidden><label for="other_service">Please specify</label><input id="other_service" name="other_service" maxlength="120" placeholder="Enter the service you need"></div>
+                <div class="field field-full"><label for="notes">Additional notes (optional)</label><textarea id="notes" name="notes" rows="4" maxlength="1000" placeholder="Do not include sensitive medical information in this demo."></textarea></div>
+                <div class="field-full"><button class="button button-wide" type="submit">Submit appointment request</button></div>
+            </form>
+        </section>
+    </main>
+    <footer class="site-footer"><div class="container">© <span data-current-year>2026</span> Lindy's Pharmacy · Catbalogan City, Samar</div></footer>
+</body>
+</html>

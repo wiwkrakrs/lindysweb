@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Look up a demo appointment request using its reference code.">
+    <title>Lindy's Pharmacy | Check Status</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+    <header class="site-header"><nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Lindy's Pharmacy home"><span class="brand-icon" aria-hidden="true">L<span>P</span></span><span>Lindy's Pharmacy</span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+        <div class="nav-links" id="nav-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="doctors.html">Doctors</a><a href="book.html">Book Appointment</a><a href="status.html" aria-current="page">Check Status</a><a class="nav-portal" href="admin.html">Staff Portal</a></div>
+    </nav></header>
+    <main class="container main-content">
+        <section class="panel lookup-panel">
+            <h1>Track Appointment Status</h1>
+            <p class="muted">Search works only in the same browser where the demo request was saved.</p>
+            <form id="status-form" class="lookup-form">
+                <label class="visually-hidden" for="reference">Appointment reference code</label>
+                <input id="reference" name="ref" required autocomplete="off" placeholder="Enter reference code (e.g. APT-20261020-1001)">
+                <button class="button" type="submit">Search</button>
+            </form>
+            <div class="message" data-message aria-live="polite" hidden></div>
+            <div id="appointment-result" aria-live="polite"></div>
+        </section>
+    </main>
+    <footer class="site-footer"><div class="container">© <span data-current-year>2026</span> Lindy's Pharmacy · Catbalogan City, Samar</div></footer>
+</body>
+</html>

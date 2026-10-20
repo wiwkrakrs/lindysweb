@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="View and manage locally stored demo appointment requests.">
+    <title>Lindy's Pharmacy | Staff Portal</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+    <header class="site-header"><nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Lindy's Pharmacy home"><span class="brand-icon" aria-hidden="true">L<span>P</span></span><span>Lindy's Pharmacy</span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+        <div class="nav-links" id="nav-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="doctors.html">Doctors</a><a href="book.html">Book Appointment</a><a href="status.html">Check Status</a><a class="nav-portal" href="admin.html" aria-current="page">Staff Portal</a></div>
+    </nav></header>
+    <main class="container main-content">
+        <section class="panel admin-panel">
+            <div class="admin-heading"><div><h1>Staff Portal</h1><p class="muted">Manage demo requests saved in this browser.</p></div><button class="button button-secondary button-small" id="clear-appointments" type="button">Clear all</button></div>
+            <aside class="notice notice-compact" role="note"><strong>Not a secure staff system:</strong> GitHub Pages has no server-side authentication or shared database. Anyone with this page can manage requests stored in this browser. Use dummy data only.</aside>
+            <div class="message" data-message aria-live="polite" hidden></div>
+            <p class="request-count" id="request-count"></p>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Reference</th><th>Patient</th><th>Service</th><th>Schedule</th><th>Status</th><th>Actions</th></tr></thead>
+                    <tbody id="appointments-body"></tbody>
+                </table>
+            </div>
+            <p id="empty-state" class="empty-state" hidden>No demo requests are saved in this browser yet.</p>
+        </section>
+    </main>
+    <footer class="site-footer"><div class="container">© <span data-current-year>2026</span> Lindy's Pharmacy · Catbalogan City, Samar</div></footer>
+</body>
+</html>
